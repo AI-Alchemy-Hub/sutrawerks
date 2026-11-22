@@ -115,7 +115,6 @@ $webpage_schema = [
 $pageCss = $asset('css/agentic-ai.css');
 $pageJs  = null; // Uses main.js via footer
 ?>
-?>
 <?php
 /**
  * ============================================================================

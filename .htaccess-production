@@ -1,12 +1,10 @@
 # ============================================================================
-# SUTRAWERKS ENTERPRISE .HTACCESS & ROUTING CONFIGURATION
+# SUTRAWERKS ENTERPRISE .HTACCESS & ROUTING CONFIGURATION (PRODUCTION)
 # ============================================================================
 
-# Enable Rewrite Engine
 RewriteEngine On
-RewriteBase /sutrawerks/
+RewriteBase /
 
-# 1. Block access to sensitive files and dotfiles (.env, composer.json, git, etc.)
 <FilesMatch "^\.">
     Require all denied
 </FilesMatch>
@@ -14,22 +12,17 @@ RewriteBase /sutrawerks/
     Require all denied
 </FilesMatch>
 
-# 2. Custom Error Documents
-ErrorDocument 403 /sutrawerks/403.php
-ErrorDocument 404 /sutrawerks/404.php
-ErrorDocument 500 /sutrawerks/500.php
+ErrorDocument 403 /403.php
+ErrorDocument 404 /404.php
+ErrorDocument 500 /500.php
 
-# 3. Enforce HTTPS (uncomment when live on production server)
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# 4. Clean URL Routing Rules
-# Skip rewriting for existing physical files and directories
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# Route clean URLs to underlying PHP scripts
 RewriteRule ^contact/?$ contact.php [L]
 RewriteRule ^industry-5-0/?$ industry-5-0.php [L]
 RewriteRule ^agentic-ai/?$ agentic-ai.php [L]

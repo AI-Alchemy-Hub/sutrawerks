@@ -58,3 +58,6 @@ Desktop.ini
 .vscode/
 .idea/
 *.sublime-workspace
+
+# Ignore local environment routing files
+.htaccess

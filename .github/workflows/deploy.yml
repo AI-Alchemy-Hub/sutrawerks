@@ -20,8 +20,21 @@ jobs:
           port: 22
           script: |
             set -e
-            cd /var/www/html
+            WEB_ROOT="/var/www/html"
+
+            mkdir -p "$WEB_ROOT"
+            cd "$WEB_ROOT"
+
+            if [ ! -d ".git" ]; then
+              echo "Initializing Git repository in production..."
+              git init
+              git remote add origin https://github.com/AI-Alchemy-Hub/sutrawerks.git
+            else
+              git remote set-url origin https://github.com/AI-Alchemy-Hub/sutrawerks.git || git remote add origin https://github.com/AI-Alchemy-Hub/sutrawerks.git
+            fi
+
+            echo "Fetching and syncing latest changes..."
             git fetch --all --tags
-            git checkout main
+            git checkout main || git checkout -b main origin/main
             git reset --hard origin/main
             echo "Deployment completed successfully at $(date -u)"

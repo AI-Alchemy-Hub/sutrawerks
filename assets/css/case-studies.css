@@ -1,0 +1,102 @@
+/**
+ * ============================================================================
+ * SUTRAWERKS — REFERENCE DEPLOYMENTS STYLESHEET
+ * ============================================================================
+ * @file        case-studies.css
+ * @description High-contrast dark theme styles, card surfaces, and filter 
+ *              controls styling for case-studies.php.
+ * ============================================================================
+ */
+
+body {
+    background-color: #0b192c;
+    color: #e2e8f0;
+}
+
+.cd-main {
+    background-color: #0b192c;
+}
+
+/* Breadcrumbs */
+.cd-breadcrumb-parent {
+    color: #94a3b8;
+}
+
+.cd-breadcrumb-current {
+    color: #cbd5e1 !important;
+}
+
+/* Typography */
+.cd-hero-title,
+.cd-section-title,
+.cd-card-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #ffffff;
+}
+
+.cd-hero-lead {
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.cd-section-desc,
+.cd-card-text {
+    color: #94a3b8;
+    line-height: 1.65;
+}
+
+/* Badges & Dividers */
+.cd-badge-module {
+    background-color: rgba(25, 135, 84, 0.18);
+    color: #4ade80;
+    border: 1px solid rgba(74, 222, 128, 0.35);
+    letter-spacing: 0.05em;
+}
+
+.cd-tag {
+    background-color: rgba(56, 189, 248, 0.14);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.cd-divider {
+    border-color: rgba(148, 163, 184, 0.2);
+}
+
+/* Cards */
+.cd-spec-card {
+    background-color: #070f1a;
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+}
+
+.cd-spec-row {
+    border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.cd-spec-label {
+    color: #e2e8f0;
+    font-weight: 500;
+}
+
+.cd-spec-val {
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+.cd-case-card {
+    background-color: #111c2e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.cd-case-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(74, 222, 128, 0.45);
+}
+
+.cd-stack-meta {
+    color: #cbd5e1;
+}

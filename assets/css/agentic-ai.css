@@ -1,0 +1,43 @@
+/**
+ * ============================================================================
+ * SUTRAWERKS — SOVEREIGN AGENTIC AI STYLESHEET
+ * ============================================================================
+ * @file        agentic-ai.css
+ * @description Page-specific styles, high-contrast text hierarchies, and 
+ *              accent glows for the Sovereign Agentic AI showcase.
+ * ============================================================================
+ */
+
+/* Global Body & Contrast Reset */
+body {
+    background-color: #0b192c;
+    color: #cbd5e1; /* High-contrast off-white for all default text */
+}
+
+/* Typography Overrides */
+h1, h2, h3, h4, h5, h6 {
+    color: #f8fafc !important;
+}
+
+p, .lead, .card-text, .small {
+    color: #94a3b8 !important; /* Clean, highly legible light slate gray */
+}
+
+/* Feature & Architecture Cards */
+.card {
+    background-color: #111c2e !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(25, 135, 84, 0.5) !important;
+}
+
+/* Runtime Spec Panel */
+.card.bg-black {
+    background-color: #070f1a !important;
+    border: 1px solid rgba(25, 135, 84, 0.3) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}

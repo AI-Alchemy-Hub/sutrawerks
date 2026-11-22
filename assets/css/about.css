@@ -1,0 +1,112 @@
+/**
+ * ============================================================================
+ * SUTRAWERKS — PRINCIPAL LEADERSHIP STYLESHEET
+ * ============================================================================
+ * @file        about.css
+ * @description High-contrast dark theme styles, biography cards, and interactive
+ *              timeline list styling for about.php.
+ * ============================================================================
+ */
+
+body {
+    background-color: #0b192c;
+    color: #e2e8f0;
+}
+
+.ab-main {
+    background-color: #0b192c;
+}
+
+/* Breadcrumbs */
+.ab-breadcrumb-parent {
+    color: #94a3b8;
+}
+
+.ab-breadcrumb-current {
+    color: #cbd5e1 !important;
+}
+
+/* Typography */
+.ab-hero-title,
+.ab-section-title,
+.ab-card-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #ffffff;
+}
+
+.ab-hero-lead {
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.ab-section-desc,
+.ab-card-text {
+    color: #94a3b8;
+    line-height: 1.65;
+}
+
+/* Badges & Tags */
+.ab-badge-module {
+    background-color: rgba(25, 135, 84, 0.18);
+    color: #4ade80;
+    border: 1px solid rgba(74, 222, 128, 0.35);
+    letter-spacing: 0.05em;
+}
+
+.ab-tag {
+    background-color: rgba(56, 189, 248, 0.14);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.ab-divider {
+    border-color: rgba(148, 163, 184, 0.2);
+}
+
+/* Cards */
+.ab-spec-card,
+.ab-bio-card,
+.ab-timeline-display {
+    background-color: #070f1a;
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+}
+
+.ab-spec-row {
+    border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.ab-spec-label {
+    color: #e2e8f0;
+    font-weight: 500;
+}
+
+.ab-spec-val {
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+/* Interactive Timeline Navigation */
+.ab-timeline-nav .list-group-item {
+    background-color: #111c2e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.ab-timeline-nav .list-group-item:hover {
+    background-color: #16253c;
+    border-color: rgba(74, 222, 128, 0.4);
+}
+
+.ab-timeline-nav .list-group-item.active {
+    background-color: #070f1a !important;
+    border-color: #22c55e !important;
+    color: #ffffff !important;
+}
+
+.ab-timeline-nav .list-group-item.active .ab-card-text {
+    color: #cbd5e1 !important;
+}

@@ -1,0 +1,60 @@
+# ==============================================================================
+# SUTRAWERKS — GIT IGNORE RULES
+# ==============================================================================
+# Package:     SutraWerks Enterprise Engineering & Platform Showcase
+# Version:     1.0.0
+# Description: Excludes secrets, local environment configs, third-party vendor
+#              packages, temporary runtime logs, and editor artifacts.
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Secrets, Credentials & Cryptographic Keys (CRITICAL)
+# ------------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+
+# ------------------------------------------------------------------------------
+# 2. Third-Party Dependencies (Managed via composer.json & composer.lock)
+# ------------------------------------------------------------------------------
+/vendor/
+
+# ------------------------------------------------------------------------------
+# 3. Local Scratchpads & Personal Notes
+# ------------------------------------------------------------------------------
+personal-notes.txt
+*.bak
+*.tmp
+
+# ------------------------------------------------------------------------------
+# 4. Runtime Logs & Cache Artifacts
+# ------------------------------------------------------------------------------
+*.log
+/logs/
+/cache/
+/tmp/
+
+# ------------------------------------------------------------------------------
+# 5. Operating System & IDE / Editor Artifacts
+# ------------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editors & IDEs (Notepad++, VS Code, JetBrains, Vim)
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-workspace

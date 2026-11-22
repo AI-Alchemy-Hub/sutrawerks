@@ -1,0 +1,91 @@
+/* ==========================================================================
+   FILE: industry-5-0.css
+   LOCATION: ./assets/css/industry-5-0.css
+   PURPOSE: Page-specific styles for Sentio™ Industry 5.0 Digital Twin
+   ========================================================================== */
+
+.sw-twin-console {
+  background: linear-gradient(145deg, #07111f 0%, #0b192c 100%);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  border-radius: 0.85rem;
+  box-shadow: 0 24px 48px -12px rgba(7, 17, 31, 0.45);
+  color: #f8fafc;
+}
+
+.sw-telemetry-metric {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 0.65rem;
+  padding: 1.15rem;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.sw-telemetry-metric.state-normal {
+  border-left: 4px solid #10b981;
+}
+
+.sw-telemetry-metric.state-warning {
+  border-left: 4px solid #f59e0b;
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.sw-telemetry-metric.state-critical {
+  border-left: 4px solid #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.sw-mono-label {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.sw-arch-node {
+  background: #ffffff;
+  border: 1px solid var(--sw-border);
+  border-top: 3px solid var(--sw-navy);
+  border-radius: 0.65rem;
+  padding: 1.5rem;
+  height: 100%;
+  transition: transform 0.2s ease, border-top-color 0.2s ease;
+}
+
+.sw-arch-node:hover {
+  transform: translateY(-3px);
+  border-top-color: var(--sw-emerald);
+}
+
+.sw-spec-table th {
+  background-color: #f1f5f9;
+  color: var(--sw-navy);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+
+/* ==========================================================================
+   SPECIFICATIONS TABLE REFINEMENT
+   ========================================================================== */
+.sw-spec-table th, 
+.sw-spec-table td {
+  font-size: 0.92rem;
+  padding: 1rem 1.25rem !important;
+}
+
+.sw-spec-table th:nth-child(1), 
+.sw-spec-table td:nth-child(1) { 
+  width: 25%; 
+}
+
+.sw-spec-table th:nth-child(2), 
+.sw-spec-table td:nth-child(2) { 
+  width: 45%; 
+}
+
+.sw-spec-table th:nth-child(3), 
+.sw-spec-table td:nth-child(3) { 
+  width: 30%; 
+}

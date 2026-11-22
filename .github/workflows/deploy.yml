@@ -25,6 +25,9 @@ jobs:
             mkdir -p "$WEB_ROOT"
             cd "$WEB_ROOT"
 
+            # Mark directory as safe for git operations to bypass dubious ownership checks
+            git config --global --add safe.directory "$WEB_ROOT"
+
             if [ ! -d ".git" ]; then
               echo "Initializing Git repository in production..."
               git init

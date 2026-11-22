@@ -1,0 +1,27 @@
+name: Deploy SutraWerks to Production VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: SSH Pull & Sync Production
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy via SSH to Ubuntu VPS
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: 22
+          script: |
+            set -e
+            cd /var/www/html
+            git fetch --all --tags
+            git checkout main
+            git reset --hard origin/main
+            echo "Deployment completed successfully at $(date -u)"

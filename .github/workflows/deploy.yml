@@ -37,4 +37,13 @@ jobs:
             git fetch --all --tags
             git checkout main || git checkout -b main origin/main
             git reset --hard origin/main
-            echo "Deployment completed successfully at $(date -u)"
+
+            echo "Correcting file permissions and ownership for Apache..."
+            chown -R www-data:www-data "$WEB_ROOT"
+            find "$WEB_ROOT" -type d -exec chmod 755 {} \;
+            find "$WEB_ROOT" -type f -exec chmod 644 {} \;
+
+            echo "Restarting Apache web server..."
+            systemctl restart apache2
+
+            echo "Deployment and synchronization completed successfully at $(date -u)"
